@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f4b02dfa33f514c9b1f9309dda7f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applePrefab: {fileID: 1849046181}
+  applePrefab: {fileID: 5011664704302370771, guid: 032142ba84d0b6a43bb514491e756bf8, type: 3}
   speed: 10
   leftAndRightEdge: 25
   chanceToChangeDirection: 0.04
@@ -327,6 +327,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1897744077210527869, guid: 9e749ed5a0ae47847a21b922cd491a57, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5578666594888887781, guid: 9e749ed5a0ae47847a21b922cd491a57, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -374,6 +378,18 @@ PrefabInstance:
     - target: {fileID: 5578666594888887782, guid: 9e749ed5a0ae47847a21b922cd491a57, type: 3}
       propertyPath: m_Name
       value: AppleTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578666594888887782, guid: 9e749ed5a0ae47847a21b922cd491a57, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578666594940447090, guid: 9e749ed5a0ae47847a21b922cd491a57, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578666594966600981, guid: 9e749ed5a0ae47847a21b922cd491a57, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3284542907992045478, guid: 9e749ed5a0ae47847a21b922cd491a57, type: 3}
