@@ -318,7 +318,7 @@ MonoBehaviour:
   applePrefab: {fileID: 1849046181}
   speed: 10
   leftAndRightEdge: 25
-  chanceToChangeDirection: 10
+  chanceToChangeDirection: 0.04
   secondBetweenAppleDrop: 1
 --- !u!1001 &5578666596597406019
 PrefabInstance:
