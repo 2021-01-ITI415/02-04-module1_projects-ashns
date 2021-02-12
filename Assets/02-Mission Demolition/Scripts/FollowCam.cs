@@ -6,24 +6,42 @@ public class FollowCam : MonoBehaviour
 {
 
     static public FollowCam S;
+    public float easing = 0.05f;
+    public Vector2 minXY = Vector2.zero;
     public bool __;
     public GameObject poi;
     public float camZ; 
 
     void Awake()
     {
-        S = this;
         camZ = this.transform.position.z;
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        Vector3 destination;
         if (poi == null)
         {
-            return;
+            destination = Vector3.zero;
         }
-        Vector3 destination = poi.transform.position;
+        else
+        {
+            destination = poi.transform.position;
+            if (poi.tag == "Projectile")
+            {
+                if (poi.GetComponent<Rigidbody>().IsSleeping())
+                {
+                    poi = null;
+                    return;
+                }
+            }
+        }
+
+        destination.x = Mathf.Max(minXY.x, destination.x);
+        destination.y = Mathf.Max(minXY.y, destination.y);
+        destination = Vector3.Lerp(transform.position, destination, easing);
         destination.z = camZ;
         transform.position = destination;
+        Camera.main.orthographicSize = destination.y + 10;
         }
 }
