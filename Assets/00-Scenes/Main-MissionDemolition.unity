@@ -515,6 +515,7 @@ GameObject:
   - component: {fileID: 792234108}
   - component: {fileID: 792234107}
   - component: {fileID: 792234106}
+  - component: {fileID: 792234109}
   m_Layer: 0
   m_Name: _Main Camera
   m_TagString: MainCamera
@@ -581,12 +582,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792234105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.06, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &792234109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792234105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f696c50b1e01cc48808a4a650effc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  easing: 0.05
+  minXY: {x: 0, y: 0}
+  __: 0
+  poi: {fileID: 0}
+  camZ: 0
 --- !u!1 &1096421865
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,6 +615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1096421867}
   - component: {fileID: 1096421866}
+  - component: {fileID: 1096421868}
   m_Layer: 0
   m_Name: Slingshot
   m_TagString: Untagged
@@ -635,6 +654,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
+--- !u!114 &1096421868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096421865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13e82a4c0545c74cbf87a580a9deecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchPoint: {fileID: 428174415}
+  prefabProjectile: {fileID: 9122023233128824057, guid: 88debf0c5a6824e4bb6eaf9f835477cb, type: 3}
+  velocityMult: 4
+  ____: 0
+  launchPos: {x: 0, y: 0, z: 0}
+  projectile: {fileID: 9122023233128824057, guid: 88debf0c5a6824e4bb6eaf9f835477cb, type: 3}
+  aimingMode: 0
 --- !u!1 &1572004184
 GameObject:
   m_ObjectHideFlags: 0
