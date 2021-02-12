@@ -19,14 +19,13 @@ public class Slingshot : MonoBehaviour
         launchPos = launchPointTrans.position;
 
     }
-  void OnMouseEnter()
+    void OnMouseEnter()
     {
-        //print("Slingshot:OnMouseEnter()");
         launchPoint.SetActive(true);
     }
     void OnMouseExit()
     {
-        //print("Slingshot:OnMouseExit()");
+
         launchPoint.SetActive(false);
     }
     void OnMouseDown()
@@ -34,12 +33,12 @@ public class Slingshot : MonoBehaviour
         aimingMode = true;
         projectile = Instantiate(prefabProjectile) as GameObject;
         projectile.transform.position = launchPos;
-        projectile.rigidbody.isKinematic = true;
+        projectile.GetComponent<Rigidbody>().isKinematic = true;
     }
     void Update()
     {
-        if (flag == false) Invoke("ResetFlag", 3);
-        if (!aimingMode || !flag) return;
+   
+        if (!aimingMode) return;
         Vector3 mousePos2D = Input.mousePosition;
         mousePos2D.z = -Camera.main.transform.position.z;
         Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
@@ -59,10 +58,9 @@ public class Slingshot : MonoBehaviour
         {
 
             aimingMode = false;
-            flag = false;
-            projectileRigidbody.isKinematic = false;
-            projectileRigidbody.velocity = -mouseDelta * velocityMult;
-            FollowCam.POI = projectile;
+            projectile.GetComponent<Rigidbody>().isKinematic = false;
+            projectile.GetComponent<Rigidbody>().velocity = -mouseDelta * velocityMult;
             projectile = null;
         }
     }
+}
