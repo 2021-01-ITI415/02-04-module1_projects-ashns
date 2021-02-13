@@ -10,7 +10,8 @@ public class Slingshot : MonoBehaviour
     public GameObject launchPoint;
     public GameObject prefabProjectile;
     public float velocityMult = 8f;
-    public bool ____;
+    //public bool ____;
+    //public bool canShoot;
     public Vector3 launchPos;
     public GameObject projectile;
     public bool aimingMode;
@@ -27,6 +28,7 @@ public class Slingshot : MonoBehaviour
     void Awake()
     {
         S = this;
+        //canShoot = true;
         Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
         launchPoint.SetActive(false);
@@ -55,7 +57,7 @@ public class Slingshot : MonoBehaviour
     void Update()
     {
         if (flag == false) { Invoke("ResetFlag", 3); }
-        if (!aimingMode || !flag) return;
+        if (!aimingMode|| !flag) return;
         Vector3 mousePos2D = Input.mousePosition;
         mousePos2D.z = -Camera.main.transform.position.z;
         Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
@@ -75,7 +77,7 @@ public class Slingshot : MonoBehaviour
         {
 
             aimingMode = false;
-            flag = false;
+           flag = false;
             projectileRigidbody.isKinematic = false;
             projectileRigidbody.velocity = -mouseDelta * velocityMult;
             FollowCam.POI = projectile;
@@ -86,6 +88,6 @@ public class Slingshot : MonoBehaviour
     }
     void ResetFlag()
     {
-        flag = true;
+       flag = true;
     }
 }
