@@ -9,7 +9,7 @@ public class FollowCam : MonoBehaviour
     public float easing = 0.05f;
     public Vector2 minXY = Vector2.zero;
     public bool __;
-    public GameObject poi;
+    public GameObject POI;
     public float camZ; 
 
     void Awake()
@@ -20,18 +20,18 @@ public class FollowCam : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 destination;
-        if (poi == null)
+        if (POI == null)
         {
             destination = Vector3.zero;
         }
         else
         {
-            destination = poi.transform.position;
-            if (poi.tag == "Projectile")
+            destination = POI.transform.position;
+            if (POI.tag == "Projectile")
             {
-                if (poi.GetComponent<Rigidbody>().IsSleeping())
+                if (POI.GetComponent<Rigidbody>().IsSleeping())
                 {
-                    poi = null;
+                    POI = null;
                     return;
                 }
             }
