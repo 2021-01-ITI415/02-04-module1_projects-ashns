@@ -6,7 +6,7 @@ public class CloudCrafter : MonoBehaviour
 {
 	[Header("Set in Inspector")]
 	public int 	numClouds = 40; // the number of clouds to make
-	public GameObject	cloudPrefabs; // the prefab for the clouds
+	public GameObject	cloudPrefab; // the prefab for the clouds
 	public Vector3 	cloudPosMin = new Vector3(-50, -5, 10);
 	public Vector3 	cloudPosMax = new Vector3(150, 100, 10);
 	public float 	cloudScaleMin = 1; // min scale for the clouds
@@ -25,8 +25,8 @@ public class CloudCrafter : MonoBehaviour
 		// iterate through and make clouds
 		GameObject cloud;
 		for (int i = 0; i < numClouds; i++) {
-			int prefabNum = Random.Range(0, cloudPrefabs.Length);
-			cloud = Instantiate(cloudPrefabs[prefabNum]) as GameObject;
+			//int prefabNum = Random.Range(0, cloudPrefabs.Length);
+			cloud = Instantiate<GameObject>(cloudPrefab);
 
 			// position of cloud
 			Vector3 cPos = Vector3.zero;

@@ -14,7 +14,6 @@ public class MissionDemolition : MonoBehaviour
 
     public Text uitLevel;
     public Text uitShots;
-    public Text uitHighScore;
     public Text uitButton;
     public Vector3 castlePos; //The place to put castles
     public GameObject[] castles; //An array of the castles
@@ -24,7 +23,7 @@ public class MissionDemolition : MonoBehaviour
     public int shotsTaken;
     public GameObject castle; //The current castle
     public GameMode mode = GameMode.idle;
-    public string showing = "Slingshot"; //FollowCam mode
+    public string showing = "Show Slingshot"; //FollowCam mode
 
     void Start()
     {

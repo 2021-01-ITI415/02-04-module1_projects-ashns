@@ -9,7 +9,7 @@ public class FollowCam : MonoBehaviour
     public float easing = 0.05f;
     public Vector2 minXY = Vector2.zero;
     public bool __;
-    public GameObject POI;
+    static public GameObject POI;
     public float camZ; 
 
     void Awake()

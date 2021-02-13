@@ -6,7 +6,7 @@ public class ProjectileLine : MonoBehaviour
 {
     static public ProjectileLine S;
     public float minDist = .1f;
-    public bool __;
+    //public bool __;
     public LineRenderer line;
     private GameObject _poi;
     public List<Vector3> points;
