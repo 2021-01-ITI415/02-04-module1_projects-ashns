@@ -14,8 +14,6 @@ public class PlayerController : MonoBehaviour
 
 	private Rigidbody rb;
 
-
-
 	void Start()
 	{
 
@@ -27,7 +25,8 @@ public class PlayerController : MonoBehaviour
 
 	void FixedUpdate()
 	{
-
+		movementX = Input.GetAxis("Horizontal");
+		movementY = Input.GetAxis("Verticle");
 		Vector3 movement = new Vector3(movementX, 0.0f, movementY);
 
 		rb.AddForce(movement * speed);
@@ -38,17 +37,17 @@ public class PlayerController : MonoBehaviour
 
 		if (other.gameObject.CompareTag("Flag"))
 		{
-			other.gameObject.SetActive(false);
+			
 				winTextObject.SetActive(true);
 		}
 	}
 
-	void OnMove(InputValue value)
-	{
-		Vector2 v = value.Get<Vector2>();
+	//void OnMove(InputValue value)
+	//{
+	//	Vector2 v = value.Get<Vector2>();
 
-		movementX = v.x;
-		movementY = v.y;
-	}
+	//	movementX = v.x;
+	//	movementY = v.y;
+	//}
 }
 
