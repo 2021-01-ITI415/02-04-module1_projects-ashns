@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/00-Scenes/SceneMain.unity
     guid: afc5006038216427399d86bb793f42d6
-  - enabled: 0
+  - enabled: 1
     path: Assets/00-Scenes/Main-ApplePicker.unity
     guid: a76078966e5564d698c1ed755489041f
-  - enabled: 0
+  - enabled: 1
     path: Assets/00-Scenes/Main-MissionDemolition.unity
     guid: 36a4f7af764a74bfab5a5ff20375bcdb
   - enabled: 1
